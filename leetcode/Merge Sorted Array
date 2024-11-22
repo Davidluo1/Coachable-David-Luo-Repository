@@ -32,7 +32,7 @@ class Solution:
         if n == 0: 
             return
 
-        # if the last number of arr1 is smaller or equal to the first number in arr2
+        # If the last number of arr1 is smaller or equal to the first number in arr2
         if nums1[m-1] <= nums2[0]:
             # i = 0
             # while i < n:
@@ -41,7 +41,7 @@ class Solution:
             nums1[m:] = nums2
             return
 
-        # if the first number of arr1 is bigger or equal to the last number in arr2
+        # If the first number of arr1 is bigger or equal to the last number in arr2
         if nums1[0] >= nums2[-1]:
             # i = 0
             # while i < m:
