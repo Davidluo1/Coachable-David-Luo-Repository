@@ -19,7 +19,7 @@ class Solution:
         2,5,6,0,0,0     1,2,3
         1,2,2,3,5,6
 
-        Insert and delete appraoch
+        Insert and delete approach
         Runtime: O(m+n)
         Spacetime: O(1)
 
