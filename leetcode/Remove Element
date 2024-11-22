@@ -1,6 +1,7 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         """
+
         Goal: return the number of element in array nums that are not equal to the variable val, and the nums array 
         with all elements that are not equal to the varibale val in front.
 
