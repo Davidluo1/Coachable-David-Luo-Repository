@@ -2,13 +2,13 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         """
 
-        Goal: Remove the duplicate items in array nums in-place while keeping its relative order.
+        Goal: Remove the duplicate items in array nums in place while keeping their relative order.
 
         Approach (list):
         1. Create an empty list and an index pointer to the first item in array nums.
         2. Iterate through the nums array, if the current item in nums is not in the list, add the item
         to the list, and swap the item with the index pointer. Increment the index pointer by 1.
-        3. return length of the list.
+        3. return the length of the list.
 
         Runtime: O(NM)
         Spacetime: O(K)
