@@ -1,0 +1,25 @@
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        """
+        Goal: return the number of element in array nums that are not equal to the variable val, and the nums array 
+        with all elements that are not equal to the varibale val in front.
+
+        Approach:
+        1. Iterate through the array nums, find the index where the elements that are equal to the variable val and remove (pop) them.
+        2. return the numbers of elements that are not equal to the variable val, and the nums array containing these items.
+
+        Runtime: O(N)
+        Spacetime: O(1)
+
+        Easy case:
+        if the length of the nums array is zero, return 0, []
+
+        """
+
+        i = 0
+
+        while i < len(nums):
+            if nums[i] == val:
+                nums.pop(i)
+            else:
+                i+=1
