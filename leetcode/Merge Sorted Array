@@ -1,0 +1,98 @@
+
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+
+        Do not return anything, modify nums1 in-place instead.
+
+        Goal: return the merged nums1 and nums2 into nums1.
+
+        Easy case:
+        if either array is empty, return the other arr
+        if nums1[m-1] <= nums2[0], start from index m, replace each index with the elements in nums2
+        if nums1[0] >= nums2[-1], swap left_ptr with right_ptr, and replace with nums2 elements
+
+        1,2,0,3,0,0
+        1,2,2,3,0,0 left_ptr == right_ptr
+        1,2,2,3,5,6
+
+        2,5,6,0,0,0     1,2,3
+        1,2,2,3,5,6
+
+        Insert and delete appraoch
+        Runtime: O(m+n)
+        Spacetime: O(1)
+
+        """
+
+        # Easy case
+        if m == 0: 
+            nums1[:] = nums2[:]
+            return
+        if n == 0: 
+            return
+
+        # if the last number of arr1 is smaller or equal to the first number in arr2
+        if nums1[m-1] <= nums2[0]:
+            # i = 0
+            # while i < n:
+            #     nums1[i+m] = nums2[i]
+            #     i += 1
+            nums1[m:] = nums2
+            return
+
+        # if the first number of arr1 is bigger or equal to the last number in arr2
+        if nums1[0] >= nums2[-1]:
+            # i = 0
+            # while i < m:
+            #     nums1[i+n] = nums1[i]
+            #     i += 1
+            # i = 0
+            # while i < n:
+            #     nums1[i] = nums2[i]
+            #     i += 1
+            nums1[m:] = nums1[:m]
+            nums1[:m] = nums2
+            return
+
+        # nums1[m:] = nums2
+        # temp = sorted(nums1)
+        # nums1 = temp
+        # return
+
+        # a1 = a2 = 0
+        # for i in range(len(nums1)):
+        #     if nums1[a1] > nums2[a2]:
+        #         nums1.insert(a1,nums2[a2])
+        #         a2 += 1
+        #         a1 += 1
+        #         m += 1
+        #         nums1.pop()
+        #     else:
+        #         a1 += 1
+        #     if a1 == m:
+        #         nums1[m:] = nums2[a2:]
+        #         return
+        #     if a2 == n:
+        #         return                
+            
+
+
+        p1 = m - 1 
+        p2 = n - 1  
+
+        for p in range(n + m - 1, -1, -1):
+            if p2 < 0:
+                break 
+
+            if p1 >= 0 and nums1[p1] > nums2[p2]:
+                nums1[p] = nums1[p1]
+                p1 -= 1 
+            else:
+                nums1[p] = nums2[p2]
+                p2 -= 1
+
+        
+
+
+        
