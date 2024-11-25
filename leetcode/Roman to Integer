@@ -1,0 +1,24 @@
+
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        Roman_numeral_dict = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+        
+        total_value = 0
+        
+        # calculate the total value
+        for i in range(len(s)):
+            # handle special case (IV, IX, etc)
+            if i < len(s) - 1 and Roman_numeral_dict[s[i]] < Roman_numeral_dict[s[i+1]]:
+                total_value -= Roman_numeral_dict[s[i]]
+            else:
+                total_value += Roman_numeral_dict[s[i]]
+        
+        return total_value
