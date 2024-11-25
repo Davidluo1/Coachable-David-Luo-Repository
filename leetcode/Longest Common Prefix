@@ -16,8 +16,8 @@ class Solution:
         Spacetime: O(P)
 
         Approach:
-        1. Iterate through the list strs and check their each index character.
-        2. Store and check the next index it that prefix exist in all strings in the list. Otherwise, 
+        1. Iterate through the list strs and check each index character.
+        2. Store and check the next index that prefix exists in all strings in the list. Otherwise, 
         increment the starting index by one.
         3. Keep track of the longest prefix string.
 
@@ -66,5 +66,3 @@ class Solution:
 
         # return longest_prefix
             
-        
-        # f, fl, flo, flow, flowe, flower, lower, ower, wer, er, r
