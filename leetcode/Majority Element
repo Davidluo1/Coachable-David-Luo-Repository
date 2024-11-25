@@ -6,7 +6,7 @@ class Solution:
 
         Approach:
         Dictionary - extra memory
-        1. Iterate through the nums array, store the count of each numbers.
+        1. Iterate through the nums array, and store the count of each number.
         2. return the key if its value is more than n/2.
 
         """
