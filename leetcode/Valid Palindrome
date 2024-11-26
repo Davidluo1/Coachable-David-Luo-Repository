@@ -1,7 +1,8 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         """
-        Goal: Check if the given string s is a palindrome without all non-alphanumeric characters and not case sensitive.
+
+        Goal: Check if the given string s is a palindrome without all non-alphanumeric characters and not case-sensitive.
 
         Approach:
         1. Create a variable and iterate through string s to store all the valid characters.
