@@ -5,10 +5,10 @@ class Solution:
         Goal: Check if the string s is a subsequence of string t.
 
         Approach:
-        1. Iterate through string t with an index pointer at first index of string s.
+        1. Iterate through string t with an index pointer at the first index of string s.
         2. If the current element of the index point is found, increment the index by 1 and continue searching 
         till the last element of string s.
-        3. Return False if not all elements in string s is found.
+        3. Return False if not all elements in string s are found.
 
         Runtime: O(T)
         Spacetime: O(1)
