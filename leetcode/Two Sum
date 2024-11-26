@@ -1,8 +1,8 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         """
-        Goal: Return the indicies of the two elements that could add up to the given target.
 
+        Goal: Return the indices of the two elements that could add up to the given target.
 
         Approach 1:
         1. Subtract the value of the current index if the target is bigger, and find the remaining in the rest of the list.
