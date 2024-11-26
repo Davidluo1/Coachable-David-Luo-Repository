@@ -1,0 +1,33 @@
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        """
+        Goal: Check if the string s is a subsequence of string t.
+
+        Approach:
+        1. Iterate through string t with an index pointer at first index of string s.
+        2. If the current element of the index point is found, increment index by 1 and continue searching 
+        till the last element of string s.
+        3. Return False if not all elements in string s is found.
+
+        Runtime: O(T)
+        Spacetime: O(1)
+
+        Easy case:
+        if s is equals to t or the length of s is 0, return true
+
+        """
+
+        # Easy case
+        if s == t or len(s) == 0: return True
+
+        i = 0
+        for ele in t:
+            if ele == s[i]:
+                i += 1
+            if i == len(s):
+                return True
+
+        return False
+
+
+
