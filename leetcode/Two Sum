@@ -1,0 +1,32 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """
+        Goal: Return the indicies of the two elements that could add up to the given target.
+
+
+        Approach 1:
+        1. Subtract the value of the current index if the target is bigger, and find the remaining in the rest of the list.
+        2. Return the index if the remaining exists.
+
+        Runtime: O(N(N-I))
+        Spacetime: O(N)
+
+        Approach 2:
+        Dictionary
+        1. Store the remaining of each index value from the target if it is smaller. 2:0, 7:1
+        2. Iterate through the nums list and check if the reminaing of an index value exist in the dictionry.
+
+        Runtime: O(N(N-I))
+        Spacetime: O(N)
+
+        """
+
+        memo = {}
+        for i in range(len(nums)):
+            remain = target - nums[i]
+            if remain in memo.keys() and memo[remain] != i:
+                return [memo[remain],i]
+            memo[nums[i]] = i
+
+    
+ 
