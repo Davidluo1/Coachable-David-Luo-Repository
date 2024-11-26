@@ -1,0 +1,23 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        """
+        Goal: Check if the string t is an anagram of string s.
+
+        Approach:
+        Use a dictionary to count the number of each letters in two strings and compare their counts.
+        Runtime: O(2N)
+        Spacetime: O(2N)
+
+        Use the string t to map the letter counts, and iterate through string s to check if it has the same 
+        amount of same letters.
+        Runtime: O(2N)
+        Spacetime: O(N)
+
+        Sort the strings and compare
+        Runtime: O(2Log N)
+        Spacetime: O(2N)
+
+        """
+        # Easy case
+        if len(s) != len(t): return False
+        return sorted(s) == sorted(t)
