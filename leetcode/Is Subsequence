@@ -14,7 +14,7 @@ class Solution:
         Spacetime: O(1)
 
         Easy case:
-        if s is equals to t or the length of s is 0, return true
+        if s is equal to t or the length of s is 0, return true
 
         """
 
