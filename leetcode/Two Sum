@@ -14,7 +14,7 @@ class Solution:
         Approach 2:
         Dictionary
         1. Store the remaining of each index value from the target if it is smaller. 2:0, 7:1
-        2. Iterate through the nums list and check if the reminaing of an index value exist in the dictionry.
+        2. Iterate through the nums list and check if the remaining of index value exist in the dictionary.
 
         Runtime: O(N(N-I))
         Spacetime: O(N)
