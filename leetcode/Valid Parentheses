@@ -7,7 +7,7 @@ class Solution:
         Quick exit, when finding one empty closing bracket.
 
         1. Iterate through the string s, and utilize if statement to check valid brackets.
-        2. Return False if one invalid parenthese is found.
+        2. Return False if one invalid parentheses is found.
         
         Easy case:
         Return False if the string s has an odd length.
