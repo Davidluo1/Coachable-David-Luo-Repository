@@ -1,6 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         """
+
         Goal: Check if the input string s is a valid parentheses string or not.
 
         Quick exit, when finding one empty closing bracket.
@@ -9,7 +10,7 @@ class Solution:
         2. Return False if one invalid parenthese is found.
         
         Easy case:
-        Return False if the string s has a odd length.
+        Return False if the string s has an odd length.
 
         """
 
