@@ -1,0 +1,17 @@
+// https://leetcode.com/problems/palindromic-substrings/description/
+
+class Solution:
+    def countSubstrings(self, s: str) -> int:
+        length = 0
+        a = ''
+        for i, j in enumerate(s):
+            a = ''
+            for m, n in enumerate(s[i:]):
+                a = a+n
+                if len(a) == 1 or len(a) == 2:
+                    if a[0] == n:
+                        length += 1
+                # print(a)
+                if a == a[::-1] and len(a) > 2:
+                    length += 1
+        return length
