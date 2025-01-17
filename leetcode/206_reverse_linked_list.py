@@ -6,7 +6,7 @@
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
-
+        
         Goal: Reverse the singly linked list, and return its new head.
 
         Approach 1:
