@@ -21,8 +21,8 @@ class Solution:
         Appracoh:
         1. Check if the current index value is not an empty space.
         2. If it is an integer, get the full number and append it to a stack.
-        3. If operator is not empty, calculate the new sum and append to the stack.
-        4. Get a operator variable that only stores division and multiplication.
+        3. If the operator is not empty, calculate the new sum and append to the stack.
+        4. Get an operator variable that only stores division and multiplication.
 
         Runtime: O(N)
         Spacetime: O(K) 
