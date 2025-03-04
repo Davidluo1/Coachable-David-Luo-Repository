@@ -60,7 +60,7 @@ def fibonacci(n):
         while len(sequence) < n:
             next_item = sequence[-1] + sequence[-2]
             sequence.append(next_item)
-    return sequence[-1]
+    return sequence
 
 def merge_intervals(intervals):
     intervals.sort(key=lambda x:x[0])
