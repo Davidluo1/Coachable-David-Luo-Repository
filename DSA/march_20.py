@@ -9,6 +9,8 @@ class Hashmap:
         self.hash_size = max_size
         self.hash_map = [[] for _ in range(max_size)]
         self.size = 0
+        self.min = None
+        self.max = None
 
     def get(self, key, value):
         i = self.hash_size % value
@@ -25,6 +27,13 @@ class Hashmap:
            return
         
         new_node = ListNode(key, value)
+        if not self.min and not self.max:
+           self.min = new_node
+           self.max = new_node
+        elif new_node.value < self.min:
+           self.min = new_node
+        elif new_node.value > self.max:
+           self.max = new_node
         i = self.hash_size % value
         if self.hash_map[i] == []:
             self.hash_map[i] = new_node
@@ -56,7 +65,6 @@ class Hashmap:
              return i
        return None
        
-
     def remove_linear(self, key, value):
        i = self.get(key)
        if i:
